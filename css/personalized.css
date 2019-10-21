@@ -1,0 +1,104 @@
+@charset "UTF-8";
+.bg-primary {
+  background-color: #1A5C99 !important; }
+
+.text-primary {
+  color: #1A5C99 !important; }
+
+.text-secondary {
+  color: #63C2E8 !important; }
+
+.bg-secondary {
+  background-color: rgba(99, 194, 232, 0.05) !important; }
+
+/*boton primario*/
+.btn-primary {
+  background-color: #1A5C99;
+  border-color: #0b2842 !important; }
+
+.btn-primary:hover,
+.btn-primary:focus {
+  background-color: #13426d !important; }
+
+.btn-primary:active {
+  background-color: #0f3558 !important;
+  border-color: #071a2c !important; }
+
+/*boton secundario*/
+.btn-secondary {
+  background-color: #63C2E8;
+  border-color: #1d97c8 !important; }
+
+.btn-secondary:hover,
+.btn-secondary:focus {
+  background-color: #37b1e1 !important; }
+
+.btn-secondary:active {
+  background-color: #21a8de !important;
+  border-color: #1a86b1 !important; }
+
+.btn-secondary:focus {
+  -webkit-box-shadow: 0 0 0 0.2rem rgba(99, 194, 232, 0.5) !important;
+          box-shadow: 0 0 0 0.2rem rgba(99, 194, 232, 0.5) !important; }
+
+.btn-secondary:focus {
+  -webkit-box-shadow: 0 0 0 0.2rem rgba(99, 194, 232, 0.5) !important;
+          box-shadow: 0 0 0 0.2rem rgba(99, 194, 232, 0.5) !important; }
+
+/* modificaciones del nav-link*/
+.nav-link {
+  color: #1A5C99 !important;
+  font-size: 0.8rem; }
+
+.nav-link:hover {
+  color: #63C2E8 !important; }
+
+.active {
+  color: #63C2E8 !important;
+  border-bottom: 4px solid #63C2E8; }
+
+.icons > a {
+  text-decoration: none; }
+
+.fab {
+  color: #63C2E8; }
+
+.fab:hover {
+  color: #1A5C99; }
+
+/*dando al body 100%*/
+html {
+  width: 100%; }
+
+/*Fondo para la letra*/
+.fondo-medio {
+  background-image: url(img/computer-3343887_1280.jpg); }
+
+/*texto en gris para ayudar*/
+.text-gris {
+  color: gray;
+  font-size: 0.65em; }
+
+.text-title {
+  font-size: 0.9em; }
+
+.text-subtitle {
+  color: gray;
+  font-size: 0.75em; }
+
+.text-importante {
+  color: red; }
+
+.text-importante-popovers {
+  color: red;
+  cursor: pointer; }
+
+/*tamaño del texto*/
+.btn-text {
+  font-size: 0.7em !important; }
+
+/*moficacion de controler*/
+.form-control {
+  font-size: 0.8em !important; }
+
+/*# sourceMappingURL=personalized.css.map */

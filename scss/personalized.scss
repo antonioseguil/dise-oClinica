@@ -1,0 +1,135 @@
+$primary:#1A5C99;
+$secondary: #63C2E8;
+
+
+.bg-primary {
+    background-color: $primary !important;
+}
+
+.text-primary {
+    color: $primary !important;
+}
+
+.text-secondary {
+    color: $secondary !important;
+}
+
+.bg-secondary {
+    background-color: rgba($secondary,0.05) !important;
+}
+
+/*boton primario*/
+
+.btn-primary {
+    background-color: $primary;
+    border-color: darken($primary, 20%) !important;
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+    background-color: darken($primary, 10%) !important;;
+}
+
+.btn-primary:active {
+    background-color: darken($primary, 15%) !important;;
+    border-color: darken($primary, 25%) !important;
+}
+
+//------------------
+/*boton secundario*/
+
+.btn-secondary {
+    background-color: $secondary;
+    border-color: darken($secondary, 20%) !important;
+}
+
+.btn-secondary:hover,
+.btn-secondary:focus {
+    background-color: darken($secondary, 10%) !important;;
+}
+
+.btn-secondary:active {
+    background-color: darken($secondary, 15%) !important;;
+    border-color: darken($secondary, 25%) !important;
+}
+
+.btn-secondary:focus {
+    box-shadow: 0 0 0 0.2rem rgba($secondary, .5) !important; //lo que hace es darle transparencia
+}
+
+.btn-secondary:focus {
+    box-shadow: 0 0 0 0.2rem rgba($secondary, .5) !important; //lo que hace es darle transparencia
+}
+
+/* modificaciones del nav-link*/
+
+.nav-link{
+    color: $primary !important;
+    font-size: 0.8rem;
+}
+
+.nav-link:hover {
+    color: $secondary !important;
+}
+
+.active{
+    color: $secondary !important;
+    border-bottom: 4px solid $secondary;
+}
+
+//modificando la clase icons
+.icons>a{
+    text-decoration: none;
+}
+
+.fab{
+    color: $secondary;
+}
+
+.fab:hover{
+    color: $primary;
+}
+/*dando al body 100%*/
+
+html{
+    width: 100%;
+}
+
+/*Fondo para la letra*/
+.fondo-medio{
+    background-image: url(img/computer-3343887_1280.jpg);
+}
+
+/*texto en gris para ayudar*/
+.text-gris{
+    color: gray;
+    font-size: 0.65em;
+}
+
+.text-title{
+    font-size: 0.9em;
+}
+
+.text-subtitle{
+    color: gray;
+    font-size: 0.75em;
+}
+
+.text-importante{
+    color: red;
+}
+
+.text-importante-popovers{
+    color: red;
+    cursor: pointer;
+}
+
+/*tamaño del texto*/
+.btn-text{
+    font-size: 0.7em !important;
+}
+
+/*moficacion de controler*/
+.form-control{
+    font-size: 0.8em !important;
+}

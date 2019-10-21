@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>LA LUZ DE DIOS</title>
+    <link rel="stylesheet" href="css/bootstrap-reboot.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/personalized.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.10.1/css/all.css"
+        integrity="sha384-wxqG4glGB3nlqX0bi23nmgwCSjWIW13BdLUEYC4VIMehfbcro/ATkyDsF/AbIOVe" crossorigin="anonymous">
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+
+
+    <link href='fullcalendar/core/main.min.css' rel='stylesheet' />
+    <link href='fullcalendar/daygrid/main.min.css' rel='stylesheet' />
+
+    <script src='fullcalendar/core/main.min.js'></script>
+    <script src='fullcalendar/daygrid/main.min.js'></script>
+
+    <script src="js/style.js"></script>
+</head>
+
+<body>
+    <!-- Cuerpo de la pagina-->
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-6">
+                <p class="text-primary mt-3">Registra tus datos para coordinar una evaluación gratuita</p>
+                <div class="border-top mb-3"></div>
+                <p class="text-gris">Para un correcto registro tenga en consideracion que (*) corresponde a datos
+                    obligatorios</p>
+                <!-- selector para escoger el tipo a evaluar-->
+                <section>
+                    <label class="text-title" for="selectTipoPaciente">¿para quién es la evaluación? <span
+                            class="text-importante">*</span> </label>
+                    <select class="form-control" name="" id="selectTipoPaciente">
+                        <option value="" disabled selected>-- Seleccionar --</option>
+                        <option value="">Niño (3 a 12 años)</option>
+                        <option value="">Niño (13 a 18 años)</option>
+                        <option value="">Adulto (18 a más)</option>
+                    </select>
+                </section>
+
+
+            </div>
+            <div class="col-4">
+                <img class="mt-5 p-1" src="img/family.jpg" height="125px" width="350px" alt="imagen de familia">
+            </div>
+
+            <!--parte del formulario-->
+
+            <!--SECCION DE DATOS FORMULARIO APODERADO-->
+            <div class="col-6 mt-1">
+                <p class="text-primary mt-3 text-title">DATOS DEL APODERADO</p>
+
+                <form>
+                    <div class="form-group">
+                        <label class="text-subtitle" for="txtName">
+                            Nombre completo
+                            <span class="text-importante">*</span>
+                        </label>
+                        <input type="text" class="form-control" id="txtName">
+                    </div>
+
+                    <div class="form-group">
+                        <label class="text-subtitle" for="">
+                            Parentesco
+                            <span class="text-importante">*</span>
+                        </label>
+                        <select class="form-control" id="exampleFormControlSelect1">
+                            <option value="" disabled selected>-- Seleccionar --</option>
+                            <option value="">Familiar</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="text-subtitle" for="txtName">
+                            Teléfono Celular
+                            <span class="text-importante">*</span>
+                        </label>
+                        <input type="tel" class="form-control" id="txtTelefono">
+                    </div>
+
+                    <div class="form-group">
+                        <label class="text-subtitle" for="txtName">
+                            Correo
+                            <span class="text-importante">*</span>
+                        </label>
+                        <input type="email" class="form-control" id="txtCorreo">
+                    </div>
+                </form>
+            </div>
+
+            <!--SECCION DE DATOS FORMULARIO NIÑO-->
+
+            <div class="col-5 mt-1">
+                <p class="text-primary mt-3 text-title">DATOS DEL NIÑO</p>
+                <div class="form-group">
+                    <label class="text-subtitle" for="txtName">
+                        Nombre completo
+                        <span class="text-importante">*</span>
+                    </label>
+                    <input type="text" class="form-control" id="txtnameni">
+                </div>
+
+                <div class="form-group">
+                    <label class="text-subtitle" for="txtedad">
+                        Edad
+                        <span class="text-importante">*</span>
+                    </label>
+                    <input type="text" class="form-control" id="txtedad">
+                </div>
+
+                <div class="form-group">
+                    <label class="text-subtitle" for="txtName">
+                        Grado Escolar
+                        <span class="text-importante">*</span>
+                    </label>
+                    <input type="text" class="form-control" id="txtgrado">
+                </div>
+
+                <div class="form-group">
+                    <label class="text-subtitle" for="txtName">
+                        Institución educativa
+                        <span class="text-importante">*</span>
+                    </label>
+                    <input type="text" class="form-control" id="txteducacion">
+                </div>
+            </div>
+
+            <!--SECCION DE DATOS DE CITAS-->
+
+            <div class="col-6 mt-5">
+
+                <p class="text-primary mt-3 text-title">DATOS PARA CITA</p>
+                <label class="text-title" for="selectTipoPaciente">Especialidades a evaluar
+                    <span class="text-importante">*</span>
+                </label>
+
+                <select class="form-control" name="" id="selectTipoPaciente">
+                    <option value="" disabled selected>-- Seleccionar --</option>
+                    <option value="">Atencion concontración</option>
+                    <option value="">Terapia Sensorial</option>
+                    <option value="">Estimulación de lenguje</option>
+                </select>
+
+            </div>
+
+            <div class="col-5 mt-1">
+                <p class="text-primary mt-3 text-title p-2 border-bottom">Selecciona hasta 3 fechas</p>
+                <div id='calendar'></div>
+                <br>
+                <br>
+                <br>
+                <br>
+            </div>
+
+
+
+
+
+        </div>
+    </div>
+
+</body>
+
+
+</html>

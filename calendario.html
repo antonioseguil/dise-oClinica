@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>LA LUZ DE DIOS</title>
+    <link rel="stylesheet" href="css/bootstrap-reboot.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/personalized.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.10.1/css/all.css"
+        integrity="sha384-wxqG4glGB3nlqX0bi23nmgwCSjWIW13BdLUEYC4VIMehfbcro/ATkyDsF/AbIOVe" crossorigin="anonymous">
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+
+
+    <link href='fullcalendar/core/main.min.css' rel='stylesheet' />
+    <link href='fullcalendar/daygrid/main.min.css' rel='stylesheet' />
+
+    <script src='fullcalendar/core/main.min.js'></script>
+    <script src='fullcalendar/daygrid/main.min.js'></script>
+
+
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-9">
+                <div id="calendaTerapista" class="p-2">
+                </div>
+            </div>
+            <div class="col-3 mt-5">
+                <div class="form-group">
+                    <label class="" for="txtName">
+                        Seleccionar fecha:
+                    </label>
+                    <input type="date" class="form-control" id="txteducacion">
+                </div>
+
+                <!-- LISTA  -->
+                <ul class="list-group">
+                    <li class="list-group-item disabled">Martes 1</li>
+                    <li class="list-group-item">Miercoles 2</li>
+                    <li class="list-group-item">Jueves 3</li>
+                    <li class="list-group-item">Viernes 4</li>
+                    <li class="list-group-item">Lunes 7 </li>
+                    <li class="list-group-item">Martes 8</li>
+                    <li class="list-group-item">Miercoles 9</li>
+                    <li class="list-group-item">Jueves 10 <span role="button" class="text-importante-popovers ml-5"
+                            data-toggle="popover">2 solicitud</span></li>
+                    <li class="list-group-item">Viernes 11</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+
+
+</body>
+
+
+</html>
+<script>
+    window.addEventListener('load', function () {
+        $(function () {
+            $('[data-toggle="popover"]').popover({
+                trigger: 'hover',
+                title: 'pacientes',
+                html: true,
+                content:getPopovers(),
+                placement:'top'
+                
+            })
+        })
+
+        var calendarTerapista = document.getElementById('calendaTerapista');
+        var calendar2 = new FullCalendar.Calendar(calendarTerapista, {
+            locale: 'es',
+            plugins: ['dayGrid'],
+            height: 600
+            //contentHeight: 100
+        });
+        calendar2.render();
+    });
+
+    function getPopovers() {
+        template = '<ul class="list-group">';
+        template += '<li class="list-group-item">U0754 María Fernadez 07:00</li>';
+        template += '<li class="list-group-item">U0572 Marío Gonzales 15:00</li>';
+        template += '</ul>';
+        return template;
+    }
+
+
+
+</script>
