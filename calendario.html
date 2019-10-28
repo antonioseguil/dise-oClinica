@@ -6,21 +6,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>LA LUZ DE DIOS</title>
-    <link rel="stylesheet" href="css/bootstrap-reboot.min.css">
+    <!--JS PERSONALIZADO-->
+    <script src="js/function.js"></script>
+
+    <!-- AGREGADO DE BOOTSTRAP-->
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/personalized.css">
+
+
+    <!-- AGREGADO PARA USO DE ICONOS-->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.10.1/css/all.css"
         integrity="sha384-wxqG4glGB3nlqX0bi23nmgwCSjWIW13BdLUEYC4VIMehfbcro/ATkyDsF/AbIOVe" crossorigin="anonymous">
+
+    <!-- JQUERY Y OTRAS DEPENDENCIAS PARA EL USO DE BOOTSTRAP-->
     <script src="js/jquery-3.4.1.min.js"></script>
     <script src="js/popper.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
 
+    <!--DEPENDENCIAS DE FULL CALENDAR-->
 
+    <!-- FULLCALENDAR DEPENDENCIAS CSS-->
     <link href='fullcalendar/core/main.min.css' rel='stylesheet' />
     <link href='fullcalendar/daygrid/main.min.css' rel='stylesheet' />
+    <link href='fullcalendar/timegrid/main.min.css' rel='stylesheet' />
 
+    <!-- FULLCALENDAR DEPENDENCIAS JS-->
     <script src='fullcalendar/core/main.min.js'></script>
+    <script src='fullcalendar/interaction/main.min.js'></script>
     <script src='fullcalendar/daygrid/main.min.js'></script>
+    <script src='fullcalendar/timegrid/main.min.js'></script>
+
 
 
 </head>
@@ -50,7 +65,7 @@
                     <li class="list-group-item">Lunes 7 </li>
                     <li class="list-group-item">Martes 8</li>
                     <li class="list-group-item">Miercoles 9</li>
-                    <li class="list-group-item">Jueves 10 <span role="button" class="text-importante-popovers ml-5"
+                    <li class="list-group-item">Jueves 10 <span role="button" class="text-importante pointer ml-5"
                             data-toggle="popover">2 solicitud</span></li>
                     <li class="list-group-item">Viernes 11</li>
                 </ul>
@@ -68,33 +83,45 @@
     window.addEventListener('load', function () {
         $(function () {
             $('[data-toggle="popover"]').popover({
-                trigger: 'hover',
+                trigger: 'click',
                 title: 'pacientes',
                 html: true,
-                content:getPopovers(),
-                placement:'top'
-                
+                content: getPopovers(),
+                placement: 'top'
+
             })
         })
 
+        //ESPACIO EN DONDE VA IR EL CALENADRIO
         var calendarTerapista = document.getElementById('calendaTerapista');
+
+        //INSTANCIANDO EL CALENDARIO
         var calendar2 = new FullCalendar.Calendar(calendarTerapista, {
             locale: 'es',
-            plugins: ['dayGrid'],
-            height: 600
-            //contentHeight: 100
+            plugins: ['interaction', 'dayGrid', 'timeGrid'],
+            selectable: true,
+            navlink: true,
+            selectMirror: true,
+            select: function (info) {
+                console.log(info);
+            },
+            editable:true,
+            events: [
+                {
+                    title: 'Cita medica',
+                    start: '2019-10-01'
+                },
+                {
+                    title: 'Cita media',
+                    start: '2019-10-04'
+                },
+                {
+                    title: 'Cita medica',
+                    start: '2019-10-16'
+                },
+            ]
         });
         calendar2.render();
     });
-
-    function getPopovers() {
-        template = '<ul class="list-group">';
-        template += '<li class="list-group-item">U0754 María Fernadez 07:00</li>';
-        template += '<li class="list-group-item">U0572 Marío Gonzales 15:00</li>';
-        template += '</ul>';
-        return template;
-    }
-
-
 
 </script>

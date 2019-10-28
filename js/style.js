@@ -30,4 +30,4 @@ function addCalendar() {
     calendar.render();
 }
 
-
+//TODO * funciones para el uso del calendario
