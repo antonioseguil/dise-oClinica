@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="esp">
 
 <head>
   <meta charset="UTF-8">
@@ -72,6 +72,28 @@
   </div>
 
 
+  <!-- Modal de los docotores-->
+  <div class="modal fade" id="modal-doctor" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Lista de doctores</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-dismiss="modal">Cerrar</button>
+          <button type="button" class="btn btn-success">Guardar cambios</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<input type="time" name="" value="">
 
 </body>
 
@@ -89,6 +111,9 @@
       })
     })
 
+    // prueba de modal
+
+
 
     //ESPACIO EN DONDE VA IR EL CALENADRIO
     var calendarTerapista = document.getElementById('calendaTerapista');
@@ -103,35 +128,39 @@
       select: function(info) {
         console.log(info);
       },
-      editable: true
+      editable: true,
+      //agregando el evento click, a los eventos que se encuentran en los dias.
+      eventClick: function(info) {
+        //console.log(info.event.start);
+        getShowModal('modal-doctor');
+      }
     });
     calendar2.render();
 
     //creando evento el cual se va agregar al dar click
     var event = {
-      id:'1',
+      id: '1',
       title: 'Evento de prueba',
-      start: '2019-11-01'
+      start: '2019-11-01',
+      end: '2019-11-02'
     };
 
     //agregando el click popover
-    $('[data-toggle="popover"]').on('shown.bs.popover',function(){
+    $('[data-toggle="popover"]').on('shown.bs.popover', function() {
       console.log('prueba de visualización');
       //buscando la lista con la clase
       var btnPopover = $('.itemprueba');
       //agregnado el boton click
-      btnPopover.click(function(){
+      btnPopover.click(function() {
         //agregando los evento correspondientes
         calendar2.addEvent(event);
       });
     });
 
+    //agregand modal
+
 
     //Agregando eventos al calendario example
-
-
-
-
 
     //ASI SE AÑADE LOS EVENTOS
     /*

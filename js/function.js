@@ -6,17 +6,8 @@ function getPopovers() {
     return template;
 }
 
-//funcion que llama al evento click
-function addEventoPopover(calendar){
-//  var btnPopover = document.getElementById('1');
-    var btnPopover = $('.itemprueba');
-    btnPopover.click(function(){
-      console.log('click');
-    });
-}
+//funcion para hacer visible a un modal
 
-//funcion para agregar los eventos a un calendar
-
-function addEventoCalendario(varCalendario,listaAdd){
-//  varCalendario.addEvent(varCalendario,listaAdd);
+function getShowModal(modaid){
+  $('#'+modaid).modal('show');
 }
